@@ -3,28 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BookStore.Models;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+        // создаем контекст данных
+        BookContext db = new BookContext();
+
         public ActionResult Index()
         {
+            // получаем из бд все объекты Book
+            IEnumerable<Book> books = db.Books;
+            // передаем все объекты в динамическое свойство Books в ViewBag
+            ViewBag.Books = books;
+            // возвращаем представление
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet]
+        public ActionResult Buy(int id)
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.BookId = id;
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public string Buy(Purchase purchase)
         {
-            ViewBag.Message = "Your contact page.";
+            purchase.Date = DateTime.Now;
+            db.Purchases.Add(purchase);
+            db.SaveChanges();
 
-            return View();
+            return "Thank you," + purchase.Person + "for your purchase";
+
         }
+
     }
 }
