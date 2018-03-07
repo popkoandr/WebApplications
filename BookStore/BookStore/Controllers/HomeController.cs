@@ -15,7 +15,7 @@ namespace BookStore.Controllers
         public ActionResult Index()
         {
             // получаем из бд все объекты Book
-            IEnumerable<Book> books = db.Books;
+            IEnumerable<Book> books = db.Books;//todo difference between IENumer.. and IQueryable in Entity context
             // передаем все объекты в динамическое свойство Books в ViewBag
             ViewBag.Books = books;
             // возвращаем представление
