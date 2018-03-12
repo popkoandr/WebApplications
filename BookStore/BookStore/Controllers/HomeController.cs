@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BookStore.Models;
+using BookStore.Util;
+using Action = Antlr.Runtime.Misc.Action;
 
 namespace BookStore.Controllers
 {
@@ -28,7 +30,6 @@ namespace BookStore.Controllers
             ViewBag.BookId = id;
             return View();
         }
-
         [HttpPost]
         public string Buy(Purchase purchase)
         {
@@ -38,6 +39,16 @@ namespace BookStore.Controllers
 
             return "Thank you," + purchase.Person + "for your purchase";
 
+        }
+
+        public ActionResult GetHtml()
+        {
+            return new HtmlResult("<h2>Привет мир!</h2>");
+        }
+
+        public ActionResult GetImage(string pathToPhoto)// todo not completed 
+        {
+            return new ImageResult(pathToPhoto);
         }
 
     }
