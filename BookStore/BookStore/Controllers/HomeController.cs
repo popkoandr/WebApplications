@@ -11,17 +11,17 @@ namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        // создаем контекст данных
+        // Create data context
         BookContext db = new BookContext();
 
         public ActionResult Index()
         {
-            // получаем из бд все объекты Book
+            
             IEnumerable<Book> books = db.Books;//todo difference between IENumer.. and IQueryable in Entity context
-            // передаем все объекты в динамическое свойство Books в ViewBag
+            // send all objects to dynamic property Books in ViewBag
             ViewBag.Books = books;
-            // возвращаем представление
-            return View();
+            return View();// also we can specify the path directly as View("Index");
+                          // or as View("~/Views/Some/Index.cshtml")
         }
 
         [HttpGet]
@@ -50,6 +50,17 @@ namespace BookStore.Controllers
         {
             return new ImageResult(pathToPhoto);
         }
+
+        public ViewResult SomeMethod()
+        {
+            ViewData["Head"] = "Hello World, hi Andrew";
+            // or use       ViewBag.Head = "Hello World, hi Andrew";
+            // or use TempData["Head"] = "Hello World, hi Andrew";
+            ViewBag.Title = "Title_SomeMethod";
+            return View("SomeView");
+        }
+
+
 
     }
 }

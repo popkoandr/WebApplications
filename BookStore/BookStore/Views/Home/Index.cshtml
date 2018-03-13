@@ -41,13 +41,20 @@
             </tr>
         }
     </table>
-</div>
+</div> <hr/>
 
 <form method="post" action="@Url.Action("GetImage")">
     <div>
         <label for="file">Choose file to upload</label>
         <input type="file" id="file" accept="image/png, image/jpeg" name="pathToPhoto" multiple>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"/>
     </div>
-    
+
 </form>
+<hr/>
+<form method="POST" action="@Url.Action("SomeMethod")">
+    <a href="https://metanit.com/sharp/mvc5/3.4.php"><h2>ViewResult и генерация представлений</h2></a>
+    <input type="submit" value="SomeMethod" />
+</form>
+<hr/>
+<hr/>
