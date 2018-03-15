@@ -5,7 +5,17 @@
 
 <!DOCTYPE html>
 
+@*<hr class="paragraphBorder" />
+<div>
+    <a href="https://metanit.com/sharp/mvc5/3.6.php"><h2>Отправка файлов в ASP.NET MVC 5</h2></a>
+</div>
+<hr />
 
+<form action="@Url.Action("GetFile")">
+    <input type="submit" value="Get file" />
+</form>
+<hr />
+<hr class="paragraphBorder" />*@
 <div>
     <h3>Распродажа книг</h3>
     <table>
@@ -57,4 +67,69 @@
     <input type="submit" value="SomeMethod" />
 </form>
 <hr/>
+
 <hr/>
+<hr class="paragraphBorder" />
+<div>
+    <a href="https://metanit.com/sharp/mvc5/3.5.php"><h2>Переадресация и отправка кодов статуса и ошибок</h2></a>
+</div>
+<hr/>
+<hr/>
+
+<form action="@Url.Action("MethodWithRedirect1")">
+    <input type="submit" value="MethodWithRedirect_1" />
+</form>
+<hr/>
+
+<form action="@Url.Action("MethodWithRedirectToRoute")">
+    <input type="submit" value="MethodWithRedirectToRoute_1" />
+</form>
+<hr/>
+
+
+<form action="@Url.Action("MethodWithRedirectToRoute")">
+    <input type="submit" value="MethodWithRedirectToRoute_1" />
+</form>
+<hr/>
+
+<form action="@Url.Action("CalcRectangleArea")">
+    <p>enter side "a"</p>
+    <input type="number" name="a"/>
+
+    <p>enter side "h"</p>
+    <input type="number" name="h"/>
+
+    <input type="submit" value="CalcRectangleArea_2"/>
+</form>
+<hr/>
+
+<form action="@Url.Action("RedirectToActionWithParams")">
+    <input type="submit" value="Redir_To_Action_WithParams" />
+</form>
+<hr />
+
+<hr class="paragraphBorder" />
+
+<hr class="paragraphBorder" />
+<div>
+    <a href="https://metanit.com/sharp/mvc5/3.6.php"><h2>Отправка файлов в ASP.NET MVC 5</h2></a>
+</div>
+<hr/>
+
+<form action="@Url.Action("GetFile")">
+    <input type="submit" value="Get file" />
+</form>
+<hr/>
+<hr class="paragraphBorder" />
+
+<hr class="paragraphBorder" />
+<div>
+    <a href="https://metanit.com/sharp/mvc5/3.7.php"><h2>Контекст запроса HttpContext. Куки. Сессии</h2></a>
+</div>
+<hr />
+
+<form action="@Url.Action("GetContext")">
+    <input type="submit" value="Get Context" />
+</form>
+<hr />
+<hr class="paragraphBorder" />

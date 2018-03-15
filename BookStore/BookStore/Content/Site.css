@@ -5,6 +5,12 @@
     padding-left: 50px;
 }
 
+hr.paragraphBorder {
+	height: 10px;
+	border: 2px;
+	box-shadow: 0 10px 10px -10px red inset;
+}
+
 nav {
     display: block
 }
@@ -32,9 +38,11 @@ table {
 }
  td {
     padding-right:10px;
+     
  }
+
 input {
-    width: 150px;
+    width: 200px;
 }
 
  /*Set padding to keep content from hitting the edges 
