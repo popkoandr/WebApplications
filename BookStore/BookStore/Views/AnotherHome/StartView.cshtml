@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "StartView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>StartView</h2>
+
+
+<hr class="paragraphBorder" />
+<a href="https://metanit.com/sharp/mvc5/4.4.php">
+    <h2>Частичные представления</h2>
+</a>
+
+@Html.Partial("Partial")
+<br/> Another way <br/>
+
+@{Html.RenderPartial("Partial");}
+
+<hr />
+
+

@@ -11,7 +11,7 @@ using Action = Antlr.Runtime.Misc.Action;
 namespace BookStore.Controllers
 {
 
-    //todo 1. why I cant to explicitly specify class for <hr> tag that is declared separately and is referenced into masterpage file
+    
     //todo 2. in what way i can restrict in style declaration that style for _input_  should be applied only for concrete input type.
     //todo 3. 
     public class HomeController : Controller
@@ -136,7 +136,7 @@ namespace BookStore.Controllers
             string ip = HttpContext.Request.UserHostAddress;
             string referrer = HttpContext.Request.UrlReferrer == null  ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
 
-            bool IsAdmin = HttpContext.User.IsInRole("admin"); //bug the trust relationship between the primary domain and the trusted domain failed."
+            //bool IsAdmin = HttpContext.User.IsInRole("admin"); //bug the trust relationship between the primary domain and the trusted domain failed."
             bool IsAuth = HttpContext.User.Identity.IsAuthenticated; // аутентифицирован ли пользователь
             string login = HttpContext.User.Identity.Name; // логин авторизованного пользователя
 
